@@ -1,102 +1,173 @@
-/* Styling for the local storage demo page */
+/** 
+Stylesheet for LocalStorage testing website
+Author: Mahamad Qaium Shah
+**/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html {
-  font-size: 14px;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
+  overflow-y: scroll;
 }
 
 body {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  background: #13192c;
-  color: #ffffff;
-}
-
-main {
-  padding: 5vh 5vw;
-  font-size: 1.25rem;
-  text-align: center;
-}
-
-.intro {
-  font-size: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-main * {
-  line-height: 1.5;
-}
-
-h1,
-h2 {
-  font-weight: 400;
-}
-
-h1 {
-  font-size: 3rem;
-  line-height: 1;
-  padding-bottom: 2rem;
-  color: #476c97;
-  font-weight: 400;
+  background-color: #c1bdba;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
-  position: relative;
   text-decoration: none;
-  color: #2eccb0;
+  color: #1ab188;
+  transition: 0.5s ease;
 }
 
-a:hover,
-a:focus {
-  color: #b9aa1f;
+a:hover {
+  color: #0b6950;
 }
 
-a::before {
-  content: "";
+/**Consoleprint css **/
+.consolePrint {
   position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
+  top: 100px;
   left: 0;
-  background-color: #2eccb0;
-  visibility: hidden;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: all 0.3s ease-in-out 0s;
+  width: 20vw;
+  cursor: pointer;
+  text-align: center;
+  background: rgba(19, 35, 47, 0.9);
+  color: #ffffff;
+  border-radius: 4px;
 }
 
-a:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
+/** Main content of the page **/
+main {
+  background-color: #13192c;
+  color: #ffffff;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
-button, input[type=submit] {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1.25rem;
-  padding: 0.5rem 1rem;
-  background: #476c97;
-  background: #2eccb0;
-  border: none;
-  border-radius: 0.5rem;
-  margin-top: 1.5rem;
+main > h1 {
+  color: #476c97;
+}
+h1,
+h2 {
+  text-align: center;
 }
 
-input[type=submit] {
-  margin-bottom: 2rem;
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
 }
 
-label {
-  font-size: inherit;
+.tab-group:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-input[type=text] {
-  padding: 0.25rem 0.5rem;
-  margin-top: 0.5rem;
-  font-size: 1.25rem;
+.tab a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background-color: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
 
-/*# sourceMappingURL=style.css.map */
+.tab a:hover {
+  background: rgba(14, 39, 31, 1);
+  color: #ffffff;
+}
+
+.active a {
+  background: #1ab188;
+  color: white;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+form {
+  width: 100%;
+}
+.field-wrap {
+  margin: 20px 0;
+  position: relative;
+}
+
+.field-wrap input {
+  padding: 8px 10px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 16px;
+}
+
+form,
+label,
+input,
+button {
+  width: 100%;
+}
+
+.field-wrap label {
+  text-transform: uppercase;
+  font-size-adjust: 0.58;
+}
+
+.field-wrap label span {
+  color: #1ab188;
+}
+
+.field-wrap .togglePassword {
+  padding: 10px 9px 10px 9px;
+  position: absolute;
+  z-index: 1;
+  margin: 11px 0 0 -37px;
+  border-radius: 0 2px 2px 0;
+  color: #ffffff;
+  background-color: #1ab188;
+  cursor: pointer;
+  transition: 0.5s ease;
+  outline: none;
+}
+
+.field-wrap .togglePassword:hover {
+  background: rgba(14, 39, 31, 1);
+}
+
+button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  margin-top: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #1ab188;
+  color: #ffffff;
+  transition: all.5s ease;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(14, 39, 31, 1);
+  color: #ffffff;
+}

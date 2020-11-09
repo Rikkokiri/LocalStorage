@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ossian Rajala</title> <!-- TODO: Change this! -->
+  <meta charset="utf-8">
+
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Stylesheets -->
+  <link type="text/css" rel="stylesheet" href="admin-style.css">
+
+  <!-- - - -  Fonts - - - -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    $(document).ready(function () {
+      getConsoleLog();
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="consolePrint">
+    <h2>Console log</h2>
+    <hr>
+    <table id="consoleTable" width="100%" border='1'>
+      <tbody>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <main>
+    <h1>WWW Applications: Local Storage Demo</h1>
+
+    <h2 id="greeting">Hello stranger!</h2>
+
+    <details id="hidable-form">
+      <summary>Tell me so we don't need to be strangers anymore :)</summary>
+      <form id="userInfForm">
+        <label for="yourName">What is your name?</label> <br>
+        <input name="yourName" id="yourName" type="text" size="30"> <br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </details>
+
+    <button id="clear">Clear local storage</button>
+  </main>
+</body>
+
+</html>
