@@ -26,7 +26,7 @@ function addListeners() {
       localStorage.setItem('lastName', lastName);
       localStorage.setItem('email', emailAdd);
       localStorage.setItem('password', passw);
-      getConsoleLog();
+      
       /* $('#consoleTable')
         .find('tbody:last-child')
         .append(
