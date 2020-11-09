@@ -3,6 +3,7 @@ $(document).ready(function () {
   tabSwap();
   showPassword();
   greetUser();
+  getConsoleLog();
 });
 
 function addListeners() {
@@ -10,8 +11,8 @@ function addListeners() {
     $('#consoleTable').toggle('slide');
   });
 
-  $('#userInfoForm').submit(function (e) {
-    e.preventDefault();
+  $('#userInfoForm').submit(function () {
+    /* e.preventDefault();*/
     let firstName = $('#firstname').val();
     let lastName = $('#lastname').val();
     let emailAdd = $('#email').val();
@@ -26,15 +27,6 @@ function addListeners() {
       localStorage.setItem('lastName', lastName);
       localStorage.setItem('email', emailAdd);
       localStorage.setItem('password', passw);
-      
-      /* $('#consoleTable')
-        .find('tbody:last-child')
-        .append(
-          `<tr><td>First Name:</td><td>${firstName}</td><tr>` +
-            `<tr><td>Last Name:</td><td>${lastName}</td><tr>` +
-            `<tr><td>Email:</td><td>${emailAdd}</td><tr>` +
-            `<tr><td>Password:</td><td>${passw}</td><tr>`
-        ); */
     }
   });
 
