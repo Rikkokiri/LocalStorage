@@ -33,8 +33,8 @@ main * {
 
 .main {
   color: #ffffff;
-  padding: 0 40px 40px 500px;
-  max-width: 1200px;
+  padding: 0 40px 40px 450px;
+  max-width: 1100px;
   margin: 40px auto;
   border-radius: 4px;
   border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
