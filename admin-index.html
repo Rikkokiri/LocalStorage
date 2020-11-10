@@ -21,11 +21,11 @@
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script.js"></script>
-  <!-- <script>
+  <script>
     $(document).ready(function () {
       getConsoleLog();
     });
-  </script> -->
+  </script>
 
 </head>
 
@@ -33,7 +33,7 @@
   <div class="consolePrint">
     <h2>LocalStorage</h2>
     <hr>
-    <table id="consoleTable" width="100%" border='1'>
+    <table id="consoleTable" width="100%">
       <tbody>
         <tr>
           <th>Key</th>
@@ -41,23 +41,56 @@
         </tr>
       </tbody>
     </table>
+    <pre id="results"></pre>
+    <p><tt id="strResults" style="max-width: 100%;"></tt></p>
   </div>
   <main>
     <h1>WWW Applications: Local Storage Demo</h1>
+    <div class="main">
+      <h2 id="greeting">Hello stranger!</h2>
 
-    <h2 id="greeting">Hello stranger!</h2>
+      <details id="hidable-form">
+        <summary>Wrong first name? Reintroduce yourself!</summary>
+        <form id="userInfFirstName">
+          <label for="firstName">What is your first name?</label> <br>
+          <input name="firstName" id="fName" type="text" size="30"> <br>
 
-    <details id="hidable-form">
-      <summary>Tell me so we don't need to be strangers anymore :)</summary>
-      <form id="userInfForm">
-        <label for="yourName">What is your name?</label> <br>
-        <input name="yourName" id="yourName" type="text" size="30"> <br>
+          <button type="submit">Submit</button>
+        </form>
+      </details>
+      <details id="hidable-form">
+        <summary>Wrong last name? Reintroduce yourself!</summary>
+        <form id="userInfLastName">
+          <label for="lastName">What is your last name?</label> <br>
+          <input name="lastName" id="lName" type="text" size="30"> <br>
 
-        <input type="submit" value="Submit">
-      </form>
-    </details>
+          <button type="submit">Submit</button>
+        </form>
+      </details>
+      <details id="hidable-form">
+        <summary>Wrong email address? Tell us your email!</summary>
+        <form id="userInfNewEmail">
+          <label for="newEmail">What is your new email?</label> <br>
+          <input name="newEmail" id="newEmail" type="text" size="30"> <br>
 
-    <button id="clear">Clear local storage</button>
+          <button type="submit">Submit</button>
+        </form>
+      </details>
+      <details id="hidable-form">
+        <summary>Do you want to change your password? </summary>
+        <form id="userInfNewPassword">
+          <label for="newPassword">What is your new password?</label> <br>
+          <input name="newPassword" id="newPass" type="text" size="30"> <br>
+
+          <button type="submit">Submit</button>
+        </form>
+      </details>
+
+      <button id="clear" style="padding: 15px 40px;">Clear local storage</button><br>
+      <button id="showJsonFormat" style="padding: 15px 70px;">Convert to Json Format</button>
+      <button id="showSerialiseFormat" style="padding: 15px 70px;">Convert to URL-encoded Notation</button>
+    </div>
+
   </main>
 </body>
 

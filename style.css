@@ -11,12 +11,13 @@ Author: Mahamad Qaium Shah
 
 html {
   overflow-y: scroll;
+  font-size: 14px;
 }
 
 body {
-  background-color: #c1bdba;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #13192c;
+  font-weight: 400;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 a {
@@ -31,34 +32,79 @@ a:hover {
 
 /**Consoleprint css **/
 .consolePrint {
-  position: absolute;
-  top: 100px;
+  position: fixed;
+  top: 180px;
   left: 0;
-  width: 20vw;
+  width: 30vw;
   cursor: pointer;
-  text-align: center;
-  background: rgba(19, 35, 47, 0.9);
-  color: #ffffff;
-  border-radius: 4px;
+  text-align: left;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+#consoleTable {
+  margin: 20px 20px 20px 0;
+  border-bottom: 1px;
+}
+
+#consoleTable td,
+#consoleTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#consoleTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#consoleTable tr:hover {
+  background-color: #ddd;
+}
+
+#consoleTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1ab188;
+  color: white;
+  text-transform: uppercase;
 }
 
 /** Main content of the page **/
-main {
-  background-color: #13192c;
+main * {
+  line-height: 1.5;
+}
+
+main > h1 {
+  font-size: 3rem;
+  line-height: 1;
+  color: #476c97;
+  font-weight: 400;
+  text-align: center;
+  padding-left: 25px;
+  margin-top: 55px;
+}
+
+main h2 {
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.main {
   color: #ffffff;
-  padding: 40px;
-  max-width: 600px;
+  padding: 0 40px 40px 350px;
+  max-width: 1000px;
   margin: 40px auto;
   border-radius: 4px;
   border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
-main > h1 {
-  color: #476c97;
-}
 h1,
 h2 {
-  text-align: center;
+  font-weight: 400;
 }
 
 .tab-group {
@@ -134,10 +180,10 @@ button {
 }
 
 .field-wrap .togglePassword {
-  padding: 10px 9px 10px 9px;
+  padding: 14px 14px 14px 14px;
   position: absolute;
   z-index: 1;
-  margin: 11px 0 0 -37px;
+  margin: 11px 0 0 -44px;
   border-radius: 0 2px 2px 0;
   color: #ffffff;
   background-color: #1ab188;
