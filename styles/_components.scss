@@ -15,7 +15,7 @@ a:focus {
     color: #b9aa1f;
 }
 
-a::before {
+a::before:not(nav) {
     content: "";
     position: absolute;
     width: 100%;
@@ -34,16 +34,24 @@ a:hover::before {
     transform: scaleX(1);
 }
 
+/* --- Navigation bar --- */
+nav {
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+    border-bottom: 2px solid rgba(46, 204, 176, 0.25);
+}
+
 /*
  * Styling for console output
  * Author: Mahamad Qaium Shah
  */
 
 .consolePrint {
-    position: fixed;
+    /* position: fixed;
     top: 180px;
     left: 0;
-    width: 30vw;
+    width: 30vw; */
+    // max-width: 100%;
 
     cursor: pointer;
     text-align: left;

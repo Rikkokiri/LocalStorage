@@ -15,7 +15,7 @@ a {
   transition: 0.5s ease;
 }
 
-s a:hover {
+a:hover {
   color: #0b6950;
 }
 
@@ -28,11 +28,11 @@ s a:hover {
   border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3); */
 
   color: #ffffff;
-  padding: 0 40px 40px 450px;
-  max-width: 1100px;
-  margin: 40px auto;
+  padding: 0 40px 40px 45px;
+  margin: 0px auto;
   border-radius: 4px;
   border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  max-width: 800px;
 
   h1, h2 {
     color: #fff;

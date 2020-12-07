@@ -27,14 +27,9 @@ body {
 /* --- Main content --- */
 
 main {
-    padding: 5vh 5vw;
+    // padding: 5vh 5vw;
     font-size: 1.25rem;
-}
-
-´
-/* Navigation bar */
-.navbar {
-    margin-bottom: 2rem;
+    max-width: 100%;
 }
 
 details {
