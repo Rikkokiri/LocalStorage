@@ -1,0 +1,202 @@
+/* Styling for the local storage demo page */
+html {
+  font-size: 14px;
+}
+
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  background: #13192c;
+  color: #ffffff;
+}
+
+main {
+  /* padding: 5vh 5vw; */
+  font-size: 1.25rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+.intro {
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+main * {
+  line-height: 1.5;
+}
+
+.main {
+  color: #ffffff;
+  padding: 0 40px 40px 450px;
+  max-width: 1100px;
+  margin: 40px auto;
+  border-radius: 4px;
+  border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+/* Navigation bar */
+.navbar {
+  margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1;
+  padding-bottom: 2rem;
+  color: #476c97;
+  font-weight: 400;
+}
+
+details {
+  position: relative;
+  padding: 20px;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: #2eccb0;
+}
+
+a:hover,
+a:focus {
+  color: #b9aa1f;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #2eccb0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* button,
+input[type='submit'] {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  background: #476c97;
+  background: #2eccb0;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+input[type='submit'] {
+  margin-bottom: 2rem;
+} */
+
+label {
+  font-size: inherit;
+}
+
+input[type='text'] {
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/**Consoleprint css **/
+.consolePrint {
+  /* position: fixed;
+  top: 180px;
+  left: 0; 
+  width: 35vw; */
+  cursor: pointer;
+  text-align: left;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+#consoleTable {
+  margin: 20px 20px 20px 0;
+  border-bottom: 1px;
+}
+
+#consoleTable td,
+#consoleTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#consoleTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#consoleTable tr:hover {
+  background-color: #ddd;
+}
+
+#consoleTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1ab188;
+  color: white;
+  text-transform: uppercase;
+}
+
+#hidable-form summary:hover {
+  color: #1ab188;
+  cursor: pointer;
+}
+#hidable-form summary:focus {
+  outline: none;
+}
+
+button {
+  max-width: 100%;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #1ab188;
+  color: #ffffff;
+  transition: all.5s ease;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(14, 39, 31, 1);
+  color: #ffffff;
+}
+
+button#clear {
+  background-color: #D64933;  
+}
+
+/*# sourceMappingURL=style.css.map */
