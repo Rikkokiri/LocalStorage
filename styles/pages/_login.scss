@@ -1,23 +1,12 @@
-/** 
-Stylesheet for LocalStorage testing website
-Author: Mahamad Qaium Shah
-**/
+/*
+ * Stylesheet for LocalStorage testing website
+ * Author: Mahamad Qaium Shah
+ */
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
-}
-
-html {
-  overflow-y: scroll;
-  font-size: 14px;
-}
-
-body {
-  background-color: #13192c;
-  font-weight: 400;
-  font-family: 'IBM Plex Mono', monospace;
 }
 
 a {
@@ -26,58 +15,12 @@ a {
   transition: 0.5s ease;
 }
 
-a:hover {
+s a:hover {
   color: #0b6950;
 }
 
-/**Consoleprint css **/
-.consolePrint {
-  position: fixed;
-  top: 180px;
-  left: 0;
-  width: 30vw;
-  cursor: pointer;
-  text-align: left;
-  background: #ffffff;
-  color: #000000;
-  border-radius: 2px;
-  padding: 10px;
-}
-
-#consoleTable {
-  margin: 20px 20px 20px 0;
-  border-bottom: 1px;
-}
-
-#consoleTable td,
-#consoleTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#consoleTable tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#consoleTable tr:hover {
-  background-color: #ddd;
-}
-
-#consoleTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #1ab188;
-  color: white;
-  text-transform: uppercase;
-}
-
 /** Main content of the page **/
-main * {
-  line-height: 1.5;
-}
-
-main > h1 {
+main>h1 {
   font-size: 3rem;
   line-height: 1;
   color: #476c97;
@@ -102,10 +45,7 @@ main h2 {
   border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
-h1,
-h2 {
-  font-weight: 400;
-}
+/* --- Registration / login panels --- */
 
 .tab-group {
   list-style: none;
@@ -143,13 +83,14 @@ h2 {
   color: white;
 }
 
-.tab-content > div:last-child {
+.tab-content>div:last-child {
   display: none;
 }
 
 form {
   width: 100%;
 }
+
 .field-wrap {
   margin: 20px 0;
   position: relative;
@@ -161,13 +102,39 @@ form {
   margin-right: auto;
   margin-left: auto;
   font-size: 16px;
+  position: relative;
 }
 
-form,
-label,
-input,
-button {
-  width: 100%;
+#register, #login, .tab-group {
+  form,
+  label,
+  input,
+  button {
+    width: 100%;
+  }
+
+  button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 0;
+    margin-top: 5px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: #1ab188;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: rgba(14, 39, 31, 1);
+    color: #ffffff;
+  }
+  
 }
 
 .field-wrap label {
@@ -181,9 +148,10 @@ button {
 
 .field-wrap .togglePassword {
   padding: 14px 14px 14px 14px;
+  margin: 10px 0 0 -44px;
   position: absolute;
   z-index: 1;
-  margin: 11px 0 0 -44px;
+  
   border-radius: 0 2px 2px 0;
   color: #ffffff;
   background-color: #1ab188;
@@ -196,24 +164,3 @@ button {
   background: rgba(14, 39, 31, 1);
 }
 
-button {
-  border: 0;
-  outline: none;
-  border-radius: 0;
-  padding: 15px 0;
-  margin-top: 5px;
-  font-size: 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  background: #1ab188;
-  color: #ffffff;
-  transition: all.5s ease;
-  -webkit-appearance: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background: rgba(14, 39, 31, 1);
-  color: #ffffff;
-}
