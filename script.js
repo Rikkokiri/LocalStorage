@@ -37,7 +37,7 @@ function addListeners() {
       localStorage.setItem('password', passw);
 
       // Redirect user
-      window.location.replace('admin-index.html');
+      window.location.replace('settings.html');
 
       /* $('#consoleTable')
         .find('tbody:last-child')
@@ -62,7 +62,7 @@ function addListeners() {
     if (username !== email && pwd !== pass) {
       alert('Wrong email or password! Enter username and password again');
     } else {
-      window.location.replace('admin-index.html');
+      window.location.replace('settings.html');
     }
     console.log(username, pwd, email, pass);
   });
