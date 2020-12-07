@@ -4,10 +4,11 @@
 <head>
   <title>Local Storage Demo</title> <!-- TODO: Change this! -->
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
   <!-- Stylesheets -->
   <link type="text/css" rel="stylesheet" href="styles/admin-style.css">
@@ -20,18 +21,18 @@
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
+
   <script src="script.js"></script>
   <script>
     // Prevent (in very rudimentary and non-secure way) non-logged in users from accessing this page
-    if (localStorage.getItem('email') === null || localStorage.getItem('firstName') === '') {
+    if (localStorage.getItem('email') === null || localStorage.getItem('firstName') === '') {
       console.log('Not logged in!')
       try {
         window.stop();
       } catch (e) {
         //IE stop loading content 
         document.execCommand('Stop');
-      } 
+      }
       window.location.replace('index.html');
     }
   </script>
@@ -40,72 +41,103 @@
       getConsoleLog();
     });
   </script>
-
 </head>
 
 <body>
-  <div class="consolePrint">
-    <h2>LocalStorage</h2>
-    <hr>
-    <table id="consoleTable" width="100%">
-      <tbody>
-        <tr>
-          <th>Key</th>
-          <th>Value</th>
-        </tr>
-      </tbody>
-    </table>
-    <pre id="results"></pre>
-    <p><tt id="strResults" style="max-width: 100%;"></tt></p>
-  </div>
-  <main class="centered">
-    <h1>WWW Applications: Local Storage Demo</h1>
-    <div class="main">
-      <h2 id="greeting">Hello stranger!</h2>
-
-      <details id="hidable-form">
-        <summary>Wrong first name? Reintroduce yourself!</summary>
-        <form id="userInfFirstName" method="post">
-          <label for="firstName">What is your first name?</label> <br>
-          <input name="firstName" id="fName" type="text" size="30"> <br>
-
-          <button type="submit">Submit</button>
-        </form>
-      </details>
-      <details id="hidable-form">
-        <summary>Wrong last name? Reintroduce yourself!</summary>
-        <form id="userInfLastName" method="post">
-          <label for="lastName">What is your last name?</label> <br>
-          <input name="lastName" id="lName" type="text" size="30"> <br>
-
-          <button type="submit">Submit</button>
-        </form>
-      </details>
-      <details id="hidable-form">
-        <summary>Wrong email address? Tell us your email!</summary>
-        <form id="userInfNewEmail" method="post">
-          <label for="newEmail">What is your new email?</label> <br>
-          <input name="newEmail" id="newEmail" type="text" size="30"> <br>
-
-          <button type="submit">Submit</button>
-        </form>
-      </details>
-      <details id="hidable-form">
-        <summary>Do you want to change your password? </summary>
-        <form id="userInfNewPassword" method="post">
-          <label for="newPassword">What is your new password?</label> <br>
-          <input name="newPassword" id="newPass" type="text" size="30"> <br>
-
-          <button type="submit">Submit</button>
-        </form>
-      </details>
-
-      <button id="clear" style="padding: 15px 40px;">Clear local storage</button><br>
-      <button id="showJsonFormat" style="padding: 15px 70px;">Convert to Json Format</button>
-      <button id="showSerialiseFormat" style="padding: 15px 70px;">Convert to URL-encoded Notation</button>
+  <!-- Use Bootstrap to structure the page -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a href="index.html" class="navbar-brand">Local Storage Demo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar7">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-stretch" id="navbar7">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">Info</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-11 offset-md-1">
+        <h1>WWW Applications: Local Storage Demo</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-4 offset-md-1">
+        <div class="consolePrint">
+          <h2>LocalStorage</h2>
+          <hr>
+          <table id="consoleTable" width="100%">
+            <tbody>
+              <tr>
+                <th>Key</th>
+                <th>Value</th>
+              </tr>
+            </tbody>
+          </table>
+          <pre id="results"></pre>
+          <p><tt id="strResults" style="max-width: 100%;"></tt></p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-7">
+        <main>
+          <h2 id="greeting">Hello stranger!</h2>
+          <details id="hidable-form">
+            <summary>Wrong first name? Reintroduce yourself!</summary>
+            <form id="userInfFirstName" method="post">
+              <label for="firstName">What is your first name?</label> <br>
+              <input name="firstName" id="fName" type="text" size="30"> <br>
 
-  </main>
+              <button type="submit">Submit</button>
+            </form>
+          </details>
+          <details id="hidable-form">
+            <summary>Wrong last name? Reintroduce yourself!</summary>
+            <form id="userInfLastName" method="post">
+              <label for="lastName">What is your last name?</label> <br>
+              <input name="lastName" id="lName" type="text" size="30"> <br>
+
+              <button type="submit">Submit</button>
+            </form>
+          </details>
+          <details id="hidable-form">
+            <summary>Wrong email address? Tell us your email!</summary>
+            <form id="userInfNewEmail" method="post">
+              <label for="newEmail">What is your new email?</label> <br>
+              <input name="newEmail" id="newEmail" type="text" size="30"> <br>
+
+              <button type="submit">Submit</button>
+            </form>
+          </details>
+          <details id="hidable-form">
+            <summary>Do you want to change your password? </summary>
+            <form id="userInfNewPassword" method="post">
+              <label for="newPassword">What is your new password?</label> <br>
+              <input name="newPassword" id="newPass" type="text" size="30"> <br>
+
+              <button type="submit">Submit</button>
+            </form>
+          </details>
+
+          <button id="clear" style="padding: 15px 40px;">Clear local storage</button><br>
+          <button id="showJsonFormat" style="padding: 15px 70px;">Convert to Json Format</button>
+          <button id="showSerialiseFormat" style="padding: 15px 70px;">Convert to URL-encoded Notation</button>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>

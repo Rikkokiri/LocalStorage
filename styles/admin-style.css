@@ -3,11 +3,11 @@ html {
   font-size: 14px;
 }
 
-html,
+/* html,
 body {
   margin: 0;
   padding: 0;
-}
+} */
 
 body {
   font-family: 'IBM Plex Mono', monospace;
@@ -17,7 +17,7 @@ body {
 }
 
 main {
-  padding: 5vh 5vw;
+  /* padding: 5vh 5vw; */
   font-size: 1.25rem;
 }
 
@@ -41,6 +41,11 @@ main * {
   margin: 40px auto;
   border-radius: 4px;
   border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+/* Navigation bar */
+.navbar {
+  margin-bottom: 2rem;
 }
 
 h1,
@@ -119,10 +124,10 @@ input[type='text'] {
 
 /**Consoleprint css **/
 .consolePrint {
-  position: fixed;
+  /* position: fixed;
   top: 180px;
-  left: 0;
-  width: 35vw;
+  left: 0; 
+  width: 35vw; */
   cursor: pointer;
   text-align: left;
   background: #ffffff;
