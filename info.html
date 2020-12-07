@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Local Storage Demo</title> <!-- TODO: Change this! -->
+  <meta charset="utf-8">
+
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Stylesheets -->
+  <link type="text/css" rel="stylesheet" href="styles/admin-style.css">
+  <link type="text/css" rel="stylesheet" href="styles/code.css">
+
+  <!-- - - -  Fonts - - - -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    $(document).ready(function () {
+      getConsoleLog();
+    });
+  </script>
+
+</head>
+<body>
+   <main>
+    <h1>/* Understanding Local Storage */</h1>
+    <ul>
+        <li>What is local storage?</li>
+        <li>How to work with local storage?</li>
+        <li>How to access and delete data stored in local storage?</li>
+        <li>How to block or enable local storage?</li>
+    </ul>
+
+    <div>
+        <h2><comment>/* What is local storage? */</comment></h2>
+        <ul>
+            <li>
+                Type of web storage storing data as key-value pairs that can be accessed via JavaScript
+            </li>
+            <li>
+                Website and browser specific data that is stored locally on user’s machine with no expiration date. 
+            </li>
+            <li>
+                The data will persist even after the browser window has been closed.
+            </li>
+        </ul>
+    </div>
+    <!-- Code block demonstrating local storage API -->
+    <h2><comment>/* Working with local storage */</comment></h2>
+    <p>
+        As can be seen from the following code sample, the interface for accessing and modifying contents of local storage is fairly simple. To learn more about local storage and its sibling technology session storage, visit <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">MDN web docs on Web Storage API</a>.
+    </p>
+    <div class="codeblock">
+        <comment>// Set a key-value pair</comment> <br>
+        localStorage.<function>setItem</function>(<string>'users-name'</string>, nameValue) <br>
+        <br>
+        <comment>// Access a value using key</comment> <br>
+        localStorage.<function>getItem</function>(<string>'users-name'</string>) <br>
+        <br>
+        <comment>// Delete a key-value pair</comment> <br>
+        localStorage.<function>removeItem</function>(<string>'users-name'</string>) <br>
+        <br>
+        <comment>// Remove all key-value pairs (associated with this domain)</comment> <br>
+        localStorage.<function>clear</function>()
+    </div>
+
+    <h2><comment>/* How to access and delete data stored in local storage? */</comment></h2>
+
+    <h2><comment>/* How to block or enable local storage? */</comment></h2>
+   </main>
+</body>
+</html>
