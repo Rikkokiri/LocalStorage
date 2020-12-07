@@ -19,30 +19,35 @@ s a:hover {
   color: #0b6950;
 }
 
-/** Main content of the page **/
-main>h1 {
-  font-size: 3rem;
-  line-height: 1;
-  color: #476c97;
-  font-weight: 400;
-  text-align: center;
-  padding-left: 25px;
-  margin-top: 55px;
-}
-
-main h2 {
-  color: #fff;
-  font-weight: 500;
-  padding-bottom: 20px;
-}
-
-.main {
-  color: #ffffff;
+.loginpage {
+  /* color: #ffffff;
   padding: 0 40px 40px 350px;
   max-width: 1000px;
   margin: 40px auto;
   border-radius: 4px;
+  border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3); */
+
+  color: #ffffff;
+  padding: 0 40px 40px 450px;
+  max-width: 1100px;
+  margin: 40px auto;
+  border-radius: 4px;
   border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+
+  h1, h2 {
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 20px;
+  }
+
 }
 
 /* --- Registration / login panels --- */
@@ -105,7 +110,10 @@ form {
   position: relative;
 }
 
-#register, #login, .tab-group {
+#register,
+#login,
+.tab-group {
+
   form,
   label,
   input,
@@ -129,12 +137,12 @@ form {
     -webkit-appearance: none;
     cursor: pointer;
   }
-  
+
   button:hover {
     background: rgba(14, 39, 31, 1);
     color: #ffffff;
   }
-  
+
 }
 
 .field-wrap label {
@@ -151,7 +159,7 @@ form {
   margin: 10px 0 0 -44px;
   position: absolute;
   z-index: 1;
-  
+
   border-radius: 0 2px 2px 0;
   color: #ffffff;
   background-color: #1ab188;
@@ -163,4 +171,3 @@ form {
 .field-wrap .togglePassword:hover {
   background: rgba(14, 39, 31, 1);
 }
-

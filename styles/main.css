@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Styling for the local storage demo page */
 html {
   font-size: 14px;
@@ -28,20 +29,7 @@ main {
   font-size: 1.25rem;
 }
 
-/* main * {
-    line-height: 1.5;
-} */
-.main {
-  color: #ffffff;
-  padding: 0 40px 40px 450px;
-  max-width: 1100px;
-  margin: 40px auto;
-  border-radius: 4px;
-  border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-}
-
-/* Navigation bar */
-.navbar {
+´ .navbar {
   margin-bottom: 2rem;
 }
 
@@ -283,30 +271,30 @@ s a:hover {
   color: #0b6950;
 }
 
-/** Main content of the page **/
-main > h1 {
-  font-size: 3rem;
-  line-height: 1;
-  color: #476c97;
-  font-weight: 400;
-  text-align: center;
-  padding-left: 25px;
-  margin-top: 55px;
-}
-
-main h2 {
-  color: #fff;
-  font-weight: 500;
-  padding-bottom: 20px;
-}
-
-.main {
-  color: #ffffff;
+.loginpage {
+  /* color: #ffffff;
   padding: 0 40px 40px 350px;
   max-width: 1000px;
   margin: 40px auto;
   border-radius: 4px;
+  border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3); */
+  color: #ffffff;
+  padding: 0 40px 40px 450px;
+  max-width: 1100px;
+  margin: 40px auto;
+  border-radius: 4px;
   border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+.loginpage h1, .loginpage h2 {
+  color: #fff;
+}
+.loginpage h1 {
+  font-size: 2rem;
+}
+.loginpage h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 20px;
 }
 
 /* --- Registration / login panels --- */
@@ -371,16 +359,20 @@ form {
 #register form,
 #register label,
 #register input,
-#register button, #login form,
+#register button,
+#login form,
 #login label,
 #login input,
-#login button, .tab-group form,
+#login button,
+.tab-group form,
 .tab-group label,
 .tab-group input,
 .tab-group button {
   width: 100%;
 }
-#register button, #login button, .tab-group button {
+#register button,
+#login button,
+.tab-group button {
   border: 0;
   outline: none;
   border-radius: 0;
@@ -396,7 +388,9 @@ form {
   -webkit-appearance: none;
   cursor: pointer;
 }
-#register button:hover, #login button:hover, .tab-group button:hover {
+#register button:hover,
+#login button:hover,
+.tab-group button:hover {
   background: #0e271f;
   color: #ffffff;
 }
