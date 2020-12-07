@@ -15,7 +15,8 @@ function addListeners() {
 
   /* Handles register */
   $('#userInfoForm').submit(function (e) {
-    /*e.preventDefault();*/
+    e.preventDefault();
+    
     let str = $('form').serialize();
     localStorage.setItem('serializedData', str);
 
@@ -34,6 +35,9 @@ function addListeners() {
       localStorage.setItem('lastName', lastName);
       localStorage.setItem('email', emailAdd);
       localStorage.setItem('password', passw);
+
+      // Redirect user
+      window.location.replace('admin-index.html');
 
       /* $('#consoleTable')
         .find('tbody:last-child')
