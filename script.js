@@ -16,7 +16,7 @@ function addListeners() {
   /* Handles register */
   $('#userInfoForm').submit(function (e) {
     e.preventDefault();
-    
+
     let str = $('form').serialize();
     localStorage.setItem('serializedData', str);
 
@@ -69,9 +69,13 @@ function addListeners() {
 
   // Button for clearing local storage
   $('#clear').click(function (event) {
-    localStorage.clear();
-    console.log('Local storage cleared');
-    window.location.replace('index.html');
+    let clearConfirmed = confirm("Are you sure you want to clear data in the local storage?")
+    
+    if (clearConfirmed) {
+      localStorage.clear();
+      console.log('Local storage cleared');
+      window.location.replace('index.html');
+    }
   });
 
   // Handle firstname in admin form submission

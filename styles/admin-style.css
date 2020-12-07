@@ -189,4 +189,9 @@ button:hover {
   background: rgba(14, 39, 31, 1);
   color: #ffffff;
 }
+
+button#clear {
+  background-color: #D64933;  
+}
+
 /*# sourceMappingURL=style.css.map */
