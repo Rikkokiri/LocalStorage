@@ -1,0 +1,426 @@
+/* Styling for the local storage demo page */
+html {
+  font-size: 14px;
+  overflow-y: scroll;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  background: #13192c;
+  color: #ffffff;
+}
+
+/* --- Utility classes --- */
+.centered {
+  text-align: center;
+}
+
+/* --- Main content --- */
+main {
+  font-size: 1.25rem;
+  max-width: 100%;
+}
+
+details {
+  position: relative;
+  padding: 20px;
+}
+
+/* --- Headings --- */
+h1,
+h2 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1;
+  padding-bottom: 2rem;
+  color: #476c97;
+  font-weight: 400;
+}
+
+button,
+input[type=submit] {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  background: #476c97;
+  background: #2eccb0;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+input[type=submit] {
+  margin-bottom: 2rem;
+}
+
+label {
+  font-size: inherit;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  border: 2px solid white;
+}
+
+/**
+ * This file should contain anything reusable such as buttons, navbars, cards etc.
+ */
+/* --- Link styling --- */
+a {
+  position: relative;
+  text-decoration: none;
+  color: #2eccb0;
+}
+
+a:hover,
+a:focus {
+  color: #b9aa1f;
+}
+
+a::before:not(nav) {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #2eccb0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* --- Navigation bar --- */
+nav {
+  margin-bottom: 3rem;
+  font-size: 1.25rem;
+  border-bottom: 2px solid rgba(46, 204, 176, 0.25);
+}
+
+/*
+ * Styling for console output
+ * Author: Mahamad Qaium Shah
+ */
+.consolePrint {
+  /* position: fixed;
+  top: 180px;
+  left: 0;
+  width: 30vw; */
+  cursor: pointer;
+  text-align: left;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+#consoleTable {
+  margin: 20px 20px 20px 0;
+  border-bottom: 1px;
+}
+
+#consoleTable td,
+#consoleTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#consoleTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#consoleTable tr:hover {
+  background-color: #ddd;
+}
+
+#consoleTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1ab188;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* --- Form components --- */
+/* button,
+input[type='submit'] {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  background: #476c97;
+  background: #2eccb0;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+input[type='submit'] {
+  margin-bottom: 2rem;
+} */
+label {
+  font-size: inherit;
+}
+
+input[type=text] {
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+#hidable-form summary:hover {
+  color: #1ab188;
+  cursor: pointer;
+}
+
+#hidable-form summary:focus {
+  outline: none;
+}
+
+button {
+  max-width: 100%;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #1ab188;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0e271f;
+  color: #ffffff;
+}
+
+button#clear {
+  background-color: #D64933;
+}
+
+/*
+ * Stylesheet for LocalStorage testing website
+ * Author: Mahamad Qaium Shah
+ */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #1ab188;
+  transition: 0.5s ease;
+}
+
+a:hover {
+  color: #0b6950;
+}
+
+.loginpage {
+  /* color: #ffffff;
+  padding: 0 40px 40px 350px;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 4px;
+  border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3); */
+  color: #ffffff;
+  padding: 0 40px 40px 45px;
+  margin: 0px auto;
+  border-radius: 4px;
+  border-radius: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  max-width: 800px;
+}
+.loginpage h1, .loginpage h2 {
+  color: #fff;
+}
+.loginpage h1 {
+  font-size: 2rem;
+}
+.loginpage h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+/* --- Registration / login panels --- */
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background-color: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.tab a:hover {
+  background: #0e271f;
+  color: #ffffff;
+}
+
+.active a {
+  background: #1ab188;
+  color: white;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+form {
+  width: 100%;
+}
+
+.field-wrap {
+  margin: 20px 0;
+  position: relative;
+}
+
+.field-wrap input {
+  padding: 8px 10px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 16px;
+  position: relative;
+}
+
+#register form,
+#register label,
+#register input,
+#register button,
+#login form,
+#login label,
+#login input,
+#login button,
+.tab-group form,
+.tab-group label,
+.tab-group input,
+.tab-group button {
+  width: 100%;
+}
+#register button,
+#login button,
+.tab-group button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  margin-top: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #1ab188;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+#register button:hover,
+#login button:hover,
+.tab-group button:hover {
+  background: #0e271f;
+  color: #ffffff;
+}
+
+.field-wrap label {
+  text-transform: uppercase;
+  font-size-adjust: 0.58;
+}
+
+.field-wrap label span {
+  color: #1ab188;
+}
+
+.field-wrap .togglePassword {
+  padding: 14px 14px 14px 14px;
+  margin: 10px 0 0 -44px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0 2px 2px 0;
+  color: #ffffff;
+  background-color: #1ab188;
+  cursor: pointer;
+  transition: 0.5s ease;
+  outline: none;
+}
+
+.field-wrap .togglePassword:hover {
+  background: #0e271f;
+}
+
+comment {
+  /* color: #478097; */
+  color: #476c97;
+  font-weight: 400;
+}
+
+.indent {
+  padding-left: 3ch;
+  border-left: 1px solid rgba(71, 108, 151, 0.25);
+}
+
+string {
+  color: #2eccb0;
+}
+
+function {
+  /* color: #9a59c5; */
+  color: #7aa2f7;
+}
+
+.declaration {
+  color: #9a59c5;
+}
+
+.codeblock {
+  color: #c0caf5;
+}
+
+/*# sourceMappingURL=main.css.map */

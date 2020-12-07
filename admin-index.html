@@ -11,7 +11,7 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
   <!-- Stylesheets -->
-  <link type="text/css" rel="stylesheet" href="styles/admin-style.css">
+  <link type="text/css" rel="stylesheet" href="styles/main.css">
 
   <!-- - - -  Fonts - - - -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -21,8 +21,8 @@
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bowser@2.9.0/es5.js"></script>
   <script>
     // Prevent (in very rudimentary and non-secure way) non-logged in users from accessing this page
     if (localStorage.getItem('email') === null || localStorage.getItem('firstName') === '') {
@@ -82,7 +82,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-7">
-        <main>
+        <main class="centered">
           <h2 id="greeting">Hello stranger!</h2>
           <details id="hidable-form">
             <summary>Wrong first name? Reintroduce yourself!</summary>
@@ -129,10 +129,7 @@
     </div>
   </div>
 
-  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
+  <!-- Bootstrap Bundle (includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
   </script>
