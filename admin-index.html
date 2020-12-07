@@ -22,6 +22,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script.js"></script>
   <script>
+    // Prevent (in very rudimentary and non-secure way) non-logged in users from accessing this page
+    if (localStorage.getItem('email') === null || localStorage.getItem('firstName') === '') {
+      console.log('Not logged in!')
+      try {
+        window.stop();
+      } catch (e) {
+        //IE stop loading content 
+        document.execCommand('Stop');
+      } 
+      window.location.replace('index.html');
+    }
+  </script>
+  <script>
     $(document).ready(function () {
       getConsoleLog();
     });
