@@ -223,34 +223,6 @@ button#clear {
   background-color: #D64933;
 }
 
-comment {
-  /* color: #478097; */
-  color: #476c97;
-  font-weight: 400;
-}
-
-.indent {
-  padding-left: 3ch;
-  border-left: 1px solid rgba(71, 108, 151, 0.25);
-}
-
-string {
-  color: #2eccb0;
-}
-
-function {
-  /* color: #9a59c5; */
-  color: #7aa2f7;
-}
-
-.declaration {
-  color: #9a59c5;
-}
-
-.codeblock {
-  color: #c0caf5;
-}
-
 /*
  * Stylesheet for LocalStorage testing website
  * Author: Mahamad Qaium Shah
@@ -419,6 +391,34 @@ form {
 
 .field-wrap .togglePassword:hover {
   background: #0e271f;
+}
+
+comment {
+  /* color: #478097; */
+  color: #476c97;
+  font-weight: 400;
+}
+
+.indent {
+  padding-left: 3ch;
+  border-left: 1px solid rgba(71, 108, 151, 0.25);
+}
+
+string {
+  color: #2eccb0;
+}
+
+function {
+  /* color: #9a59c5; */
+  color: #7aa2f7;
+}
+
+.declaration {
+  color: #9a59c5;
+}
+
+.codeblock {
+  color: #c0caf5;
 }
 
 /*# sourceMappingURL=main.css.map */
