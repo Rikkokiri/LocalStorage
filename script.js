@@ -81,6 +81,7 @@ function addListeners() {
 
   // Handle firstname in admin form submission
   $('#userInfFirstName').submit(function (event) {
+    event.preventDefault();
     // Store user's name in local storage
     let fNameVal = $('#fName').val();
     if (fNameVal !== '') {
