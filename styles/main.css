@@ -395,6 +395,14 @@ form {
   background: #0e271f;
 }
 
+.button-row {
+  text-align: center;
+  margin-top: 3rem;
+}
+.button-row button {
+  margin: 0.5rem;
+}
+
 comment {
   /* color: #478097; */
   color: #476c97;
