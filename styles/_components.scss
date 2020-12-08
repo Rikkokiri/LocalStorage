@@ -100,6 +100,10 @@ nav {
         // background-color: #dee2e6;
         background-color: $color-fadedblue;
     }
+
+    tbody th {
+        color: $accent-green;
+    }
 }
 
 .table.with-borders {

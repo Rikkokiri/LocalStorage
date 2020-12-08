@@ -19,6 +19,12 @@ section.info-section {
         padding-bottom: 1rem;
     }
 
+    h3 {
+        font-size: 1.5rem;
+        padding-top: 1.5rem;
+        // color: $accent-green;
+    }
+
     // Add some space to the end of the page
     &:last-child {
         padding-bottom: 3rem;

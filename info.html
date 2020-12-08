@@ -223,10 +223,14 @@
                                         86
                                     </th>
                                     <td>
-
+                                        Chrome >> Preferences >> Privacy and security >> Cookies and other site data >>
+                                        Block all cookies (not recommended)
+                                        <br> <br>
+                                        Disabling all cookies will not actually delete local storage data but just disables the use of local storage. The local storage data can be still be viewed from developer tools.
                                     </td>
                                     <td>
-
+                                        Chrome >> Preferences >> Privacy and security >> Clear browsing data >> Cookies
+                                        and other site data
                                     </td>
                                 </tr>
                                 <tr>
@@ -234,7 +238,8 @@
                                         Firefox <br> 83
                                     </th>
                                     <td>
-
+                                        Firefox >> Preferences >> Privacy & Security >> Custom <br>
+                                        From dropbown next to 'cookies' select 'All cookies' <br>
                                     </td>
                                     <td>
 
@@ -268,10 +273,12 @@
                                         72.0
                                     </th>
                                     <td>
-
+                                        Opera >> Preferences >> Site settings >> Cookies and site data >> Block all cookies (not recommended) <br>
+                                        Disabling all cookies will seemingly wipe local storage but when cookies are enabled again, the local storage data is still there.
                                     </td>
                                     <td>
-
+                                        Opera >> Preferences >> Site settings >> Cookies and site data >> See all cookies and site data <br>
+                                        Now you can either 'Remove all' or remove cookies and local storage data for specific site
                                     </td>
                                 </tr>
                                 <tr>
@@ -280,10 +287,13 @@
                                         14
                                     </th>
                                     <td>
-
+                                        Safari >> Preferences >> Privacy >> Block all cookies <br>
+                                        Blocks all cookies and use of local storage completely <br>
+                                        This also wipes the local storage clean
                                     </td>
                                     <td>
-
+                                        Safari >> Preferences >> Privacy >> Manage website data <br>
+                                        Allows removing associated with a specific domain but not viewing the data
                                     </td>
                                 </tr>
                             </tbody>
@@ -299,21 +309,72 @@
                             provide sufficient tools and access for viewing and deleting local storage data, you can dig
                             into that data in your file browser.
                         </p>
+                        <h3>On Windows</h3>
+                        <details>
+                            <summary>Chrome</summary>
+                            <p>For Google Chrome users on Windows, you can access the local storage data from the following
+                                file
+                                path:
+                            </p>
+                            <p class="codeblock">
+                                <string>%LocalAppData%\Google\Chrome\User Data\Default\Local Storage</string>
+                            </p>    
+                            <p>
+                                In the subfolder, you should find a LOG file that will contain information on the user's
+                                actions, such as, generating tables and deleting data types. The time of the activity is
+                                also
+                                logged in chronology.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Firefox</summary>
+                            <p>
+                                Instructions coming soon.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Edge</summary>
+                            <p>
+                                Instructions coming soon.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>IE</summary>
+                            <p>
+                                Instructions coming soon.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Opera</summary>
+                            <p>
+                                Instructions coming soon.
+                            </p>
+                        </details>
 
-                        <!-- <h3>On Windows</h3>
-                        <h3>On MacOS</h3>
-                        <h3>On Linux</h3> -->
+                        <h3>On Mac</h3>
+                        <details>
+                            <summary>Chrome</summary>
+                            <p>
+                                Instructions coming soon.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Firefox</summary>
+                            <p>
+                                Instructions coming soon.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Opera</summary>
+                            <p>
+                                Instructions coming soon.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Safari</summary>
+                            
+                        </details>
 
-                        <p>For Google Chrome users on Windows, you can access the local storage data from the following
-                            file
-                            path:<br><br>
-                            <string>%LocalAppData%\Google\Chrome\User Data\Default\Local Storage</string>
-                            <br><br>
-                            In the subfolder, you should find a LOG file that will contain information on the user's
-                            actions, such as, generating tables and deleting data types. The time of the activity is
-                            also
-                            logged in chronology.
-                        </p>
                     </section>
 
                 </main>

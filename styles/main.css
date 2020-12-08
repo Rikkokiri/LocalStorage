@@ -173,6 +173,9 @@ nav {
   color: #0b1017;
   background-color: #476c97;
 }
+.table tbody th {
+  color: #2eccb0;
+}
 
 .table.with-borders th, .table.with-borders td {
   border: 2px solid #476c97;
@@ -434,6 +437,10 @@ section.info-section h2 {
   font-size: 1.9rem;
   padding-top: 2rem;
   padding-bottom: 1rem;
+}
+section.info-section h3 {
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
 }
 section.info-section:last-child {
   padding-bottom: 3rem;
