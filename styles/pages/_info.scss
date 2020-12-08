@@ -5,12 +5,51 @@ ul.content-list {
 }
 
 section.info-section {
+    /* border-top: 1px solid $color-fadedblue;
+    &:first-of-type {
+        border: none;
+    } */
+
     margin-bottom: 2rem;
     font-size: 1.2rem;
 
     h2 {
         font-size: 1.9rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    // Add some space to the end of the page
+    &:last-child {
+        padding-bottom: 3rem;
+    }
+}
+
+.info-section details {
+    &:hover, &:focus {
+        summary {
+            color: $accent-gold;
+        }
+
+        border: none;
+    }
+
+    summary {
+        outline: none;
+        font-size: 1.3rem;
+        // margin-bottom: 1rem;
+
+        &::-webkit-details-marker {
+            color: $accent-gold;
+        }
+    }
+
+    // Add some space above the first element after summary tag (aka 2nd child of details element)
+    > :nth-child(2) {
         padding-top: 1rem;
-        padding-bottom: 0.5rem;
+    }
+
+    p, ul, ol {
+        margin-left: 1.5rem;
     }
 }

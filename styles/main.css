@@ -423,13 +423,40 @@ ul.content-list a:hover {
 }
 
 section.info-section {
+  /* border-top: 1px solid $color-fadedblue;
+  &:first-of-type {
+      border: none;
+  } */
   margin-bottom: 2rem;
   font-size: 1.2rem;
 }
 section.info-section h2 {
   font-size: 1.9rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+section.info-section:last-child {
+  padding-bottom: 3rem;
+}
+
+.info-section details:hover, .info-section details:focus {
+  border: none;
+}
+.info-section details:hover summary, .info-section details:focus summary {
+  color: #b9aa1f;
+}
+.info-section details summary {
+  outline: none;
+  font-size: 1.3rem;
+}
+.info-section details summary::-webkit-details-marker {
+  color: #b9aa1f;
+}
+.info-section details > :nth-child(2) {
   padding-top: 1rem;
-  padding-bottom: 0.5rem;
+}
+.info-section details p, .info-section details ul, .info-section details ol {
+  margin-left: 1.5rem;
 }
 
 comment {
@@ -459,7 +486,7 @@ function {
 .codeblock {
   color: #c0caf5;
   background-color: #0b1017;
-  padding: 1rem 2rem;
+  padding: 1.5rem 3rem;
   font-size: 1.1rem;
   display: inline-block;
   margin-bottom: 2rem;
