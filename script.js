@@ -5,6 +5,7 @@ $(document).ready(function () {
   greetUser();
   convertToJson();
   displaySerialiser();
+  autofillLogin();
 });
 
 function addListeners() {
@@ -23,7 +24,7 @@ function addListeners() {
     let firstName = $('#firstname').val();
     let lastName = $('#lastname').val();
     let emailAdd = $('#email').val();
-    let passw = $('#password').val();
+    let passw = $('#password').val(); 
 
     if (
       firstName !== '' &&
@@ -147,6 +148,17 @@ function showPassword() {
       input.attr('type', 'password');
     }
   });
+}
+
+/* TODO: Autofill login form when login details are available */
+function autofillLogin() {
+  let email = localStorage.getItem('email')
+  let pwd = localStorage.getItem('password')
+
+  if (email !== '' && pwd !== '') {
+    $('#emailLogin').val(email);
+    $('#passwordLogin').val(pwd);
+  }
 }
 
 /* 
