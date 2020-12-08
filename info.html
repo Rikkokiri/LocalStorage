@@ -51,15 +51,30 @@
             <div class="col-sm-12 col-md-11 offset-md-1">
                 <main>
                     <h1>/* Understanding Local Storage */</h1>
-                    <ul>
+                   <!-- <ul class="content-list">
                         <li>What is local storage?</li>
                         <li>How to work with local storage?</li>
                         <li>How to access and delete data stored in local storage?</li>
                         <li>How to block or enable local storage?</li>
+                        <li>Local storage data on your machine</li>
                     </ul>
-
-                    <div>
-                        <h2>
+                    -->
+                    <ul class="content-list">
+                        <li>
+                            <a href="#explain-storage">What is local storage?</a>
+                        </li>
+                        <li>
+                            <a href="#explain-code">How to work with local storage?</a>
+                        </li>
+                        <li>
+                            <a href="#explain-settings">How to access and delete data stored in local storage?</a>
+                        </li>
+                        <li>
+                            <a href="#explain-filesystem">Local storage data on your machine?</a>
+                        </li>
+                    </ul>
+                    <section class="info-section">
+                        <h2 id="explain-storage">
                             <comment>/* What is local storage? */</comment>
                         </h2>
                         <ul>
@@ -74,46 +89,153 @@
                                 The data will persist even after the browser window has been closed.
                             </li>
                         </ul>
-                    </div>
+                    </section>
                     <!-- Code block demonstrating local storage API -->
-                    <h2>
-                        <comment>/* Working with local storage */</comment>
-                    </h2>
-                    <p>
-                        As can be seen from the code sample, the interface for accessing and modifying contents of local
-                        storage is fairly simple. To learn more about local storage and its sibling technology session
-                        storage, visit <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">MDN web docs
-                            on Web Storage API</a>.
-                    </p>
-                    <div class="codeblock">
-                        <comment>// Set a key-value pair</comment> <br>
-                        localStorage.<function>setItem</function>(<string>'users-name'</string>, nameValue) <br>
-                        <br>
-                        <comment>// Access a value using key</comment> <br>
-                        localStorage.<function>getItem</function>(<string>'users-name'</string>) <br>
-                        <br>
-                        <comment>// Delete a key-value pair</comment> <br>
-                        localStorage.<function>removeItem</function>(<string>'users-name'</string>) <br>
-                        <br>
-                        <comment>// Remove all key-value pairs (associated with this domain)</comment> <br>
-                        localStorage.<function>clear</function>()
-                    </div>
+                    <section class="info-section">
+                        <h2 id="explain-code">
+                            <comment>/* Working with local storage */</comment>
+                        </h2>
+                        <p>
+                            As can be seen from the code sample, the interface for accessing and modifying contents of
+                            local
+                            storage is fairly simple. To learn more about local storage and its sibling technology
+                            session
+                            storage, visit <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage">MDN web
+                                docs
+                                on Web Storage API</a>.
+                        </p>
+                        <div class="codeblock">
+                            <comment>// Set a key-value pair</comment> <br>
+                            localStorage.<function>setItem</function>(<string>'users-name'</string>, nameValue) <br>
+                            <br>
+                            <comment>// Access a value using key</comment> <br>
+                            localStorage.<function>getItem</function>(<string>'users-name'</string>) <br>
+                            <br>
+                            <comment>// Delete a key-value pair</comment> <br>
+                            localStorage.<function>removeItem</function>(<string>'users-name'</string>) <br>
+                            <br>
+                            <comment>// Remove all key-value pairs (associated with this domain)</comment> <br>
+                            localStorage.<function>clear</function>()
+                        </div>
+                    </section>
 
-                    <h2>
-                        <comment>/* How to access and delete data stored in local storage? */</comment>
-                    </h2>
-                    <p>For Google Chrome users on Windows, you can access the local storage data from the following file
-                        path:<br><br>
-                        <string>%LocalAppData%\Google\Chrome\User Data\Default\Local Storage</string>
-                        <br><br>
-                        In the subfolder, you should find a LOG file that will contain information on the user's
-                        actions, such as, generating tables and deleting data types. The time of the activity is also
-                        logged in chronology.
-                    </p>
+                    <section class="info-section">
+                        <h2 id="explain-settings">
+                            <comment>/* How to access and delete local storage data? */</comment>
+                        </h2>
 
-                    <h2>
-                        <comment>/* How to block or enable local storage? */</comment>
-                    </h2>
+                        <table class="table with-borders">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Browser</th>
+                                    <th scope="col">Version</th>
+                                    <th scope="col">Disable Local Storage</th>
+                                    <th scope="col">Clear Local Storage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Chrome</th>
+                                    <td>
+                                        86
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Firefox</th>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Edge</th>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">IE</th>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Opera</th>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Safari</th>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="info-section">
+                        <h2 id="explain-filesystem">
+                            <comment>/* Local storage data on your machine */</comment>
+                        </h2>
+                        <p>
+                            Since local storage data is stored locally on your machine, even if your browser does not
+                            provide sufficient tools and access for viewing and deleting local storage data, you can dig
+                            into that data in your file browser.
+                        </p>
+
+                        <!-- <h3>On Windows</h3>
+                        <h3>On MacOS</h3>
+                        <h3>On Linux</h3> -->
+
+                        <p>For Google Chrome users on Windows, you can access the local storage data from the following
+                            file
+                            path:<br><br>
+                            <string>%LocalAppData%\Google\Chrome\User Data\Default\Local Storage</string>
+                            <br><br>
+                            In the subfolder, you should find a LOG file that will contain information on the user's
+                            actions, such as, generating tables and deleting data types. The time of the activity is
+                            also
+                            logged in chronology.
+                        </p>
+                    </section>
+
                 </main>
             </div>
         </div>

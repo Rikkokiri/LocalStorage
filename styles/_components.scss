@@ -89,6 +89,25 @@ nav {
     text-transform: uppercase;
 }
 
+/* --- Bootstrap table adjustments --- */
+
+.table {
+    color: #fff;
+    max-width: 1400px;
+
+    thead {
+        color: darken($color-bg, 37%);
+        // background-color: #dee2e6;
+        background-color: $color-fadedblue;
+    }
+}
+
+.table.with-borders {
+    th, td {
+        border: 2px solid $color-fadedblue;
+    }
+}
+
 /* --- Form components --- */
 
 /* button,
@@ -151,5 +170,5 @@ button:hover {
 }
 
 button#clear {
-    background-color: #D64933;
+    background-color: $color-warning;
 }

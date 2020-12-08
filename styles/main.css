@@ -1,3 +1,4 @@
+/* --- Colors --- */
 /* Styling for the local storage demo page */
 html {
   font-size: 14px;
@@ -161,6 +162,20 @@ nav {
   background-color: #1ab188;
   color: white;
   text-transform: uppercase;
+}
+
+/* --- Bootstrap table adjustments --- */
+.table {
+  color: #fff;
+  max-width: 1400px;
+}
+.table thead {
+  color: #0b1017;
+  background-color: #476c97;
+}
+
+.table.with-borders th, .table.with-borders td {
+  border: 2px solid #476c97;
 }
 
 /* --- Form components --- */
@@ -403,6 +418,20 @@ form {
   margin: 0.5rem;
 }
 
+ul.content-list a:hover {
+  text-decoration: none;
+}
+
+section.info-section {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+section.info-section h2 {
+  font-size: 1.9rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 comment {
   /* color: #478097; */
   color: #476c97;
@@ -429,6 +458,11 @@ function {
 
 .codeblock {
   color: #c0caf5;
+  background-color: #0b1017;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
