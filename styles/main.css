@@ -486,8 +486,16 @@ function {
   color: #7aa2f7;
 }
 
-.declaration {
+declaration {
   color: #9a59c5;
+}
+
+punctuation {
+  color: #9a59c5;
+}
+
+number {
+  color: #b9aa1f;
 }
 
 .codeblock {

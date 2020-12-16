@@ -70,7 +70,10 @@
                             <a href="#explain-settings">How to access and delete data stored in local storage?</a>
                         </li>
                         <li>
-                            <a href="#explain-filesystem">Local storage data on your machine?</a>
+                            <a href="#explain-filesystem">(TODO) Local storage data on your machine?</a>
+                        </li>
+                        <li>
+                            <a href="#explain-privatemode">(TODO) Local storage and private mode?</a>
                         </li>
                     </ul>
                     <section class="info-section">
@@ -116,6 +119,45 @@
                             <br>
                             <comment>// Remove all key-value pairs (associated with this domain)</comment> <br>
                             localStorage.<function>clear</function>()
+                        </div>
+                        <p>
+                            Key-value pairs are always stored as strings <a
+                                href="https://www.w3schools.com/html/html5_webstorage.asp">(source w3schools)</a>, but
+                            that does not mean that one is limited to
+                            only string data. When using other formats, such as numbers, one just needs to remember to
+                            convert the stored string value to right data type.
+                        </p>
+                        <p>
+                            Local storage can also be used to store JavaScript objects by simply conversting the object
+                            to a JSON string. Then to use or update the object, the JSON string can be conververted back
+                            to a JavaScript object.
+                        </p>
+                        <div class="codeblock">
+                            <comment>// Define an example JavaScript object</comment> <br>
+                            <declaration>let</declaration> user <punctuation>=</punctuation> {
+                            <div class="indent">
+                                firstName<punctuation>:</punctuation> <string>"Harry"</string>, <br>
+                                lastName<punctuation>:</punctuation> <string>"Potter"</string>, <br>
+                                email<punctuation>:</punctuation> <string>"harry.potter@hogwarts.edu"</string>, <br>
+                                alsoKnownAs<punctuation>:</punctuation> [<string>"Boy Who Lived"</string>, <string>"Chosen One"</string>, <string>"Undesirable No. 1"</string>], <br>
+                                wand<punctuation>:</punctuation> { <br>
+                                <div class="indent">
+                                    length<punctuation>:</punctuation> <number>11</number>, <br>
+                                    wood<punctuation>:</punctuation> <string>"holly"</string>, <br>
+                                    code<punctuation>:</punctuation> <string>"phoenix feather"</string> <br>
+                                </div>
+                                }
+                            </div>
+                            }
+                            <br>
+                            <br>
+
+                            <comment>// Convert an object to string for storage and store it</comment> <br>
+                            <declaration>let</declaration> userString <punctuation>=</punctuation> <function>JSON</function>.<function>stringify</function>(user); <br>
+                            localStorage.<function>setItem</function>(<string>'user-details'</string>, userString) <br>
+                            <br>
+                            <comment>// Convert retrieved string back to a JavaScript object</comment> <br>
+                            <declaration>let</declaration> parsedObject <punctuation>=</punctuation> <function>JSON</function>.<function>parse</function>(localStorage.<function>getItem</function>(<string>'user-details'</string>))
                         </div>
                     </section>
                     <section class="info-section">
@@ -226,7 +268,9 @@
                                         Chrome >> Preferences >> Privacy and security >> Cookies and other site data >>
                                         Block all cookies (not recommended)
                                         <br> <br>
-                                        Disabling all cookies will not actually delete local storage data but just disables the use of local storage. The local storage data can be still be viewed from developer tools.
+                                        Disabling all cookies will not actually delete local storage data but just
+                                        disables the use of local storage. The local storage data can be still be viewed
+                                        from developer tools.
                                     </td>
                                     <td>
                                         Chrome >> Preferences >> Privacy and security >> Clear browsing data >> Cookies
@@ -273,12 +317,16 @@
                                         72.0
                                     </th>
                                     <td>
-                                        Opera >> Preferences >> Site settings >> Cookies and site data >> Block all cookies (not recommended) <br>
-                                        Disabling all cookies will seemingly wipe local storage but when cookies are enabled again, the local storage data is still there.
+                                        Opera >> Preferences >> Site settings >> Cookies and site data >> Block all
+                                        cookies (not recommended) <br>
+                                        Disabling all cookies will seemingly wipe local storage but when cookies are
+                                        enabled again, the local storage data is still there.
                                     </td>
                                     <td>
-                                        Opera >> Preferences >> Site settings >> Cookies and site data >> See all cookies and site data <br>
-                                        Now you can either 'Remove all' or remove cookies and local storage data for specific site
+                                        Opera >> Preferences >> Site settings >> Cookies and site data >> See all
+                                        cookies and site data <br>
+                                        Now you can either 'Remove all' or remove cookies and local storage data for
+                                        specific site
                                     </td>
                                 </tr>
                                 <tr>
@@ -312,13 +360,14 @@
                         <h3>On Windows</h3>
                         <details>
                             <summary>Chrome</summary>
-                            <p>For Google Chrome users on Windows, you can access the local storage data from the following
+                            <p>For Google Chrome users on Windows, you can access the local storage data from the
+                                following
                                 file
                                 path:
                             </p>
                             <p class="codeblock">
                                 <string>%LocalAppData%\Google\Chrome\User Data\Default\Local Storage</string>
-                            </p>    
+                            </p>
                             <p>
                                 In the subfolder, you should find a LOG file that will contain information on the user's
                                 actions, such as, generating tables and deleting data types. The time of the activity is
@@ -378,9 +427,14 @@
                         </details>
                         <details>
                             <summary>Safari</summary>
-                            
+
                         </details>
 
+                    </section>
+                    <section class="info-section">
+                        <h2 id="explain-privatemode">
+                            <comment>/* Local storage and private mode */</comment>
+                        </h2>
                     </section>
 
                 </main>
