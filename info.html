@@ -136,15 +136,22 @@
                             <comment>// Define an example JavaScript object</comment> <br>
                             <declaration>let</declaration> user <punctuation>=</punctuation> {
                             <div class="indent">
-                                firstName<punctuation>:</punctuation> <string>"Harry"</string>, <br>
-                                lastName<punctuation>:</punctuation> <string>"Potter"</string>, <br>
-                                email<punctuation>:</punctuation> <string>"harry.potter@hogwarts.edu"</string>, <br>
-                                alsoKnownAs<punctuation>:</punctuation> [<string>"Boy Who Lived"</string>, <string>"Chosen One"</string>, <string>"Undesirable No. 1"</string>], <br>
+                                firstName<punctuation>:</punctuation>
+                                <string>"Harry"</string>, <br>
+                                lastName<punctuation>:</punctuation>
+                                <string>"Potter"</string>, <br>
+                                email<punctuation>:</punctuation>
+                                <string>"harry.potter@hogwarts.edu"</string>, <br>
+                                alsoKnownAs<punctuation>:</punctuation> [<string>"Boy Who Lived"</string>, <string>
+                                    "Chosen One"</string>, <string>"Undesirable No. 1"</string>], <br>
                                 wand<punctuation>:</punctuation> { <br>
                                 <div class="indent">
-                                    length<punctuation>:</punctuation> <number>11</number>, <br>
-                                    wood<punctuation>:</punctuation> <string>"holly"</string>, <br>
-                                    code<punctuation>:</punctuation> <string>"phoenix feather"</string> <br>
+                                    length<punctuation>:</punctuation>
+                                    <number>11</number>, <br>
+                                    wood<punctuation>:</punctuation>
+                                    <string>"holly"</string>, <br>
+                                    code<punctuation>:</punctuation>
+                                    <string>"phoenix feather"</string> <br>
                                 </div>
                                 }
                             </div>
@@ -153,11 +160,14 @@
                             <br>
 
                             <comment>// Convert an object to string for storage and store it</comment> <br>
-                            <declaration>let</declaration> userString <punctuation>=</punctuation> <function>JSON</function>.<function>stringify</function>(user); <br>
+                            <declaration>let</declaration> userString <punctuation>=</punctuation>
+                            <function>JSON</function>.<function>stringify</function>(user); <br>
                             localStorage.<function>setItem</function>(<string>'user-details'</string>, userString) <br>
                             <br>
                             <comment>// Convert retrieved string back to a JavaScript object</comment> <br>
-                            <declaration>let</declaration> parsedObject <punctuation>=</punctuation> <function>JSON</function>.<function>parse</function>(localStorage.<function>getItem</function>(<string>'user-details'</string>))
+                            <declaration>let</declaration> parsedObject <punctuation>=</punctuation>
+                            <function>JSON</function>.<function>parse</function>(localStorage.<function>getItem
+                            </function>(<string>'user-details'</string>))
                         </div>
                     </section>
                     <section class="info-section">
@@ -171,14 +181,16 @@
                         <details>
                             <summary>Chrome</summary>
                             <p>
-                                Starting from the top bar menu, follow the path below to view local storage data (associated with currently visited domain)
+                                Starting from the top bar menu, follow the path below to view local storage data
+                                (associated with currently visited domain)
                             </p>
                             <ol>
                                 <li>
                                     View >> Developer >> Developer Tools
                                 </li>
                                 <li>
-                                    Select tab 'Application' (you may need to click arrow >> to reveal this and other options)
+                                    Select tab 'Application' (you may need to click arrow >> to reveal this and other
+                                    options)
                                 </li>
                                 <li>From side panel section 'Storage' open 'Local Storage'</li>
                                 <li>
@@ -190,7 +202,8 @@
                         <details>
                             <summary>Firefox</summary>
                             <p>
-                                Starting from the top bar menu, follow the path below to view local storage data (associated with currently visited domain)
+                                Starting from the top bar menu, follow the path below to view local storage data
+                                (associated with currently visited domain)
                             </p>
                             <p class="codeblock">
                                 Tools >> Web Developer >> Storage Inspector
@@ -202,14 +215,16 @@
                         <details>
                             <summary>Edge</summary>
                             <p>
-                                Starting from the top bar menu, follow the path below to view local storage data (associated with currently visited domain)
+                                Starting from the top bar menu, follow the path below to view local storage data
+                                (associated with currently visited domain)
                             </p>
                             <ol>
                                 <li>
                                     Tools >> Developer >> Developer Tools...
                                 </li>
                                 <li>
-                                    Select tab 'Application' (you may need to click arrow >> to reveal this and other options)
+                                    Select tab 'Application' (you may need to click arrow >> to reveal this and other
+                                    options)
                                 </li>
                                 <li>
                                     From side panel section 'Storage' open 'Local Storage'
@@ -229,14 +244,16 @@
                         <details>
                             <summary>Opera</summary>
                             <p>
-                                Starting from the top bar menu, follow the path below to view local storage data (associated with currently visited domain)
+                                Starting from the top bar menu, follow the path below to view local storage data
+                                (associated with currently visited domain)
                             </p>
                             <ol>
                                 <li>
                                     From top menu select Developer >> Developer Tools
                                 </li>
                                 <li>
-                                    Select tab 'Application' (you may need to click arrow >> to reveal this and other options)
+                                    Select tab 'Application' (you may need to click arrow >> to reveal this and other
+                                    options)
                                 </li>
                                 <li>From side panel section 'Storage' open 'Local Storage'</li>
                                 <li>
@@ -282,7 +299,8 @@
                                     <td>
                                         Chrome >> Preferences >> Privacy and security >> Cookies and other site data >>
                                         Block all cookies (not recommended)
-                                        <br> <br>
+                                        <br>
+                                        <br>
                                         Disabling all cookies will not actually delete local storage data but just
                                         disables the use of local storage. The local storage data can be still be viewed
                                         from developer tools.
@@ -298,10 +316,29 @@
                                     </th>
                                     <td>
                                         Firefox >> Preferences >> Privacy & Security >> Custom <br>
-                                        From dropbown next to 'cookies' select 'All cookies' <br>
+                                        From dropbown next to 'cookies' select 'All cookies'
+                                        <br>
+                                        <br>
+                                        There is also an option to block cookies "on unvisited sites". This allows you
+                                        to keep using and updating your existing cookies but prevents creation of
+                                        cookies on sites
+                                        you've not visited before.
                                     </td>
                                     <td>
-
+                                        Firefox >> Preferences >> Privacy & Security >> Clear Data (button under title
+                                        "Cookies and Site Data") <br>
+                                        Then if you wish to only delete site data, keep only that option checked press
+                                        "Clear"
+                                        <br>
+                                        <br>
+                                        To delete data by domain, press button "Manage data" below the aforementioned
+                                        Clear Data -button. Here you can either search for a specific domain or browse
+                                        the list.
+                                        <br>
+                                        <br>
+                                        <strong>Note:</strong> You need to press "Save changes" before exiting this menu
+                                        or the data you
+                                        chose to delete, will not be removed.
                                     </td>
                                 </tr>
                                 <tr>
@@ -309,10 +346,23 @@
                                         Edge <br>
                                     </th>
                                     <td>
-
+                                        Microsoft Edge (top menu) >> Preferences >> Cookies and site permissions >>
+                                        Cookies and site data >> Turn off "Allow sites to save and read cookie data
+                                        (recommended)"
+                                        <br>
+                                        <br>
+                                        Disabling access to cookie data seems to wipe local storage (after page refers
+                                        data is not visible via developer tools) but when cookies are
+                                        enabled again, the local storage data reappears.
                                     </td>
                                     <td>
-
+                                        Microsoft Edge (top menu) >> Preferences >> Cookies and site permissions >>
+                                        Cookies and site data >> See all cookies and site data >> Remove all
+                                        <br>
+                                        <br>
+                                        Or you can delete data associated with certain domain or under that domain
+                                        delete data in specific storage type (such as local storage) or even individual
+                                        cookies.
                                     </td>
                                 </tr>
                                 <!-- <tr>
@@ -333,13 +383,17 @@
                                     </th>
                                     <td>
                                         Opera >> Preferences >> Site settings >> Cookies and site data >> Block all
-                                        cookies (not recommended) <br>
+                                        cookies (not recommended)
+                                        <br>
+                                        <br>
                                         Disabling all cookies will seemingly wipe local storage but when cookies are
                                         enabled again, the local storage data is still there.
                                     </td>
                                     <td>
                                         Opera >> Preferences >> Site settings >> Cookies and site data >> See all
-                                        cookies and site data <br>
+                                        cookies and site data
+                                        <br>
+                                        <br>
                                         Now you can either 'Remove all' or remove cookies and local storage data for
                                         specific site
                                     </td>
@@ -450,6 +504,11 @@
                         <h2 id="explain-privatemode">
                             <comment>/* Local storage and private mode */</comment>
                         </h2>
+                        <p>
+                            Using private mode (also known as incognito mode), essentially turn local storage into
+                            session storage. Local storage data is created, it persist through page refers and closing
+                            and re-opening a tab, but is deleted once you close the private window.
+                        </p>
                     </section>
 
                 </main>
